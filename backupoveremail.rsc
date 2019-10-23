@@ -5,13 +5,13 @@ add name="Backup" owner=Admin policy=ftp,read,policy,test,sensitive \
     \n:log info \"Starting backup\";\r\
     \n/system backup save name=Nameofile_Daily\r\
     \n:delay 00:00:01\r\
-    \n/tool e-mail send file=Nameofile_Daily.backup to=\"burimbajraktari3@gmail.com\" body=\"\
+    \n/tool e-mail send file=Nameofile_Daily.backup to=\"*@gmail.com\" body=\"\
     Router #1 daily backup file attached.\" \\\r\
     \n   subject=\"Nameofile  \$[/system clock get date] at \$[/system clock get\
     \_time]  Backup\"\r\
     \n/ export file Prishtina_Daily\r\
     \n:delay 00:00:10\r\
-    \n/tool e-mail send file=Nameofile_Daily.rsc to=\"burimbajraktari3@gmail.com\" body=\"Rou\
+    \n/tool e-mail send file=Nameofile_Daily.rsc to=\"*@gmail.com\" body=\"Rou\
     ter #1 daily script file attached.\" \\\r\
     \n   subject=\"Nameofile  \$[/system clock get date] at \$[/system clock get\
     \_time]  Script\"\r\
